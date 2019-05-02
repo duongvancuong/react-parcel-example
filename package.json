@@ -1,0 +1,41 @@
+{
+  "name": "react-parcel-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/duongvancuong/react-parcel-example",
+  "author": "duongvancuong",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development parcel index.html --open",
+    "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url /",
+    "clean": "rimraf .cache lib dist"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "babel-preset-react-app": "^8.0.0",
+    "parcel-bundler": "^1.12.3",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "postcss": {
+    "modules": false,
+    "plugins": {
+      "autoprefixer": {
+        "browsers": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "not ie < 9"
+        ],
+        "flexbox": "no-2009"
+      }
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.2.0",
+    "rimraf": "^2.6.3"
+  }
+}
